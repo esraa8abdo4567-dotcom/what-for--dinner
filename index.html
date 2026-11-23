@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's For Dinner?</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+  <header class="page-header">
+    <div class="brand">
+      <div class="brand-icon">
+        <i class="fa-solid fa-utensils"></i>
+      </div>
+      <div>
+        <h1>What's For Dinner</h1>
+        <p>Your daily meal inspiration</p>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <button title="Saved recipes">
+        <i class="fa-regular fa-bookmark"></i>
+      </button>
+      <button title="Refresh" onclick="document.getElementById('randomBtn').click()">
+        <i class="fa-solid fa-rotate-left"></i>
+      </button>
+      <button title="Settings">
+        <i class="fa-solid fa-gear"></i>
+      </button>
+      <div class="avatar">
+        <i class="fa-solid fa-user"></i>
+      </div>
+    </div>
+  </header>
+
+  <main class="recipe-card">
+
+    <section class="photo-panel">
+      <img id="mealImage" alt="Recipe image">
+
+      <div class="rating">
+        <i class="fa-solid fa-star"></i>
+        <span id="rating"></span>
+        <small>(356 reviews)</small>
+      </div>
+
+      <div class="time-card">
+        <div>
+          <i class="fa-regular fa-clock"></i>
+          <small>Prep Time</small>
+          <strong id="prepTime"></strong>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-fire-burner"></i>
+          <small>Cook Time</small>
+          <strong id="cookTime"></strong>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-users"></i>
+          <small>Servings</small>
+          <strong id="servings"></strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-panel">
+
+      <div class="recipe-top">
+        <div>
+          <div class="badges">
+            <span id="difficulty"></span>
+            <span id="category"></span>
+          </div>
+
+          <h2 id="mealName"></h2>
+          <p id="description"></p>
+        </div>
+
+        <div class="actions">
+          <button id="saveBtn" title="Save recipe">
+            <i class="fa-regular fa-bookmark"></i>
+          </button>
+
+          <button id="shareBtn" title="Share recipe">
+            <i class="fa-solid fa-share-nodes"></i>
+          </button>
+        </div>
+      </div>
+
+      <nav class="tabs">
+        <button class="tab active" data-tab="ingredients">
+          <i class="fa-solid fa-list-check"></i>
+          Ingredients
+        </button>
+
+        <button class="tab" data-tab="instructions">
+          <i class="fa-solid fa-book-open"></i>
+          Instructions
+        </button>
+
+        <button class="tab" data-tab="nutrition">
+          <i class="fa-solid fa-chart-pie"></i>
+          Nutrition
+        </button>
+
+        <button class="tab" data-tab="tips">
+          <i class="fa-solid fa-lightbulb"></i>
+          Chef's Tips
+        </button>
+      </nav>
+
+      <div id="tabContent" class="tab-content"></div>
+
+      <div class="bottom-actions">
+        <button id="randomBtn">
+          <i class="fa-solid fa-arrows-rotate"></i>
+          Try Another Recipe
+        </button>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
